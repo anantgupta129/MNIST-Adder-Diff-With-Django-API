@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Output{% endblock title %}
+
+{% block body %}
+<img src="data:image/png;base64, {{image}}" alt=" " />
+
+Predict Number: {{label}}  Sum: {{sum}}  Difference: {{diff}}
+{% endblock body %}
