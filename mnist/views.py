@@ -6,6 +6,7 @@ from PIL import Image
 from torchvision import transforms as T
 
 from .custom_mnist import Net
+from base64 import b64encode
 
 
 use_cuda = torch.cuda.is_available()
@@ -42,7 +43,7 @@ def predict(request):
         #     )
         # )
         context = {
-            'image': im_bytes,
+            'image': b64encode(im_bytes).decode("utf-8"),
             'label': pred_lab.argmax().item(),
             'sum' : int(round(pred_sum.item(), 0)),
             'diff': int(round(pred_diff.item(), 0))

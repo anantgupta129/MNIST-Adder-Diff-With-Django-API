@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+.nfs*
+*.ipynb
+*.pyc
+.DS_Store
+*.pth
+**/__pycache__/**
+.vscode
+

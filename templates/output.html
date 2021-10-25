@@ -3,7 +3,14 @@
 {% block title %}Output{% endblock title %}
 
 {% block body %}
-<img src="data:image/png;base64, {{image}}" alt=" " />
+<br>
 
-Predict Number: {{label}}  Sum: {{sum}}  Difference: {{diff}}
+<p style="text-align:center">
+    <img src="data:;base64, {{ image }}" alt=" " height=65 class="center">
+</p> 
+
+<p style="text-align:center">Predict Number = {{label}} </p>
+<p style="text-align:center">Sum ={{sum}}  Difference = {{diff}}</p>
+
+
 {% endblock body %}
