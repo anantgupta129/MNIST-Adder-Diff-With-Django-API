@@ -43,6 +43,7 @@ def predict(request):
         # )
         context = {
             'image': b64encode(im_bytes).decode("utf-8"),
+            'number': int(rand_num.item()),
             'label': pred_lab.argmax().item(),
             'sum' : int(round(pred_sum.item(), 0)),
             'diff': int(round(pred_diff.item(), 0))
