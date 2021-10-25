@@ -1,13 +1,12 @@
+from base64 import b64encode
 from io import BytesIO
 
 import torch
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import HttpResponse, render
 from PIL import Image
 from torchvision import transforms as T
 
 from .custom_mnist import Net
-from base64 import b64encode
-
 
 use_cuda = torch.cuda.is_available()
 device = torch.device("cuda" if use_cuda else "cpu")
